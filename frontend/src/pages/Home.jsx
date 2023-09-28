@@ -219,7 +219,8 @@ const Home = () => {
             <div className="relative z-10 xl:w-[770px] flex justify-end mt-[50px] lg:mt-0 ">
               <img src={featureImg} alt="" className="w-3/4 " />
 
-              <div className="w-[150px] lg:w-[248px] bg-white absolute bottom-[50px] lg:mt-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:pt-4 lg:px-4 lg:pb-[26px] rounded-[10px] ">
+              <div className="w-[150px] lg:w-[248px] bg-white absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:pt-4 lg:px-4 lg:pb-[26px] rounded-[10px] ">
+
                 <div className="flex items-center justify-between ">
                   <div className="flex items-center gap-[6px] lg:gap-3 ">
                     <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-headingColor font-[600] ">
@@ -234,7 +235,7 @@ const Home = () => {
                   </span>
                 </div>
 
-                <div className="w-[65px] lg:w-[96px] bg-[#CCf0F3] py-1 px-2 lg:py-[6px] lg:px-[10px] text-[8px] lg:text-[12px] lg:leading-4 text-irisBlueColor font-[500] mt-2 lg:mt-4 rounded-full">
+                <div className="w-[65px] lg:w-[96px] bg-[#CCf0F3] py-1 px-2 lg:py-[6px] lg:px-[10px] text-[8px] leading-[8px] lg:text-[12px] lg:leading-4 text-irisBlueColor font-[500] mt-2 lg:mt-4 rounded-full">
                   Consultation
                 </div>
 
