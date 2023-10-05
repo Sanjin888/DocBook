@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { BsArrowRight } from "react-icons/bs";
 import About from "../components/About/About";
 import ServiceList from "../components/Services/ServiceList";
+import DoctorList from "../components/Doctors/DoctorList";
 
 const Home = () => {
   return (
@@ -220,7 +221,6 @@ const Home = () => {
               <img src={featureImg} alt="" className="w-3/4 " />
 
               <div className="w-[150px] lg:w-[248px] bg-white absolute bottom-[50px] left-0 md:bottom-[100px] md:left-5 z-20 p-2 pb-3 lg:pt-4 lg:px-4 lg:pb-[26px] rounded-[10px] ">
-
                 <div className="flex items-center justify-between ">
                   <div className="flex items-center gap-[6px] lg:gap-3 ">
                     <p className="text-[10px] leading-[10px] lg:text-[14px] lg:leading-5 text-headingColor font-[600] ">
@@ -251,6 +251,22 @@ const Home = () => {
         </div>
       </section>
       {/* ============== features section end =========== */}
+
+      {/* ============== our great doctors =========== */}
+      <section>
+        <div className="container">
+          <div className="xl:w-[470px] mx-auto ">
+            <h2 className="heading text-center "> Our Great Doctors</h2>
+            <p className="text__para teqxt-center">
+              World-class care for everyone. Our health System offers unmatched,
+              expert health care.
+            </p>
+          </div>
+
+          <DoctorList/>
+        </div>
+      </section>
+      {/* ============== our great doctors end =========== */}
     </>
   );
 };
