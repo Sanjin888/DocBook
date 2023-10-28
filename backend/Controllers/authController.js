@@ -6,7 +6,7 @@ import bcrypt from "bcryptjs";
 const generateToken = (user) => {
   return jwt.sign(
     { id: user._id, role: user.role },
-    process.env.JWT_SECRET_key,
+    process.env.JWT_SECRET_KEY,
     {
       expiresIn: "15d",
     }
@@ -89,7 +89,10 @@ export const login = async (req, res) => {
     }
 
     //compare password
-    const isPasswordMatch = await bcrypt.compare(password, user.password);
+    const isPasswordMatch = await bcrypt.compare(
+      req.body.password,
+      user.password
+    );
 
     if (!isPasswordMatch) {
       return res
@@ -98,7 +101,18 @@ export const login = async (req, res) => {
     }
 
     //get token
-    const token = generateToken(user)
+    const token = generateToken(user);
 
-  } catch (err) {}
+    const { password, role, appointments, ...rest } = user._doc;
+
+    return res.status(200).json({
+      status: true,
+      message: "Successfully logged in",
+      token,
+      data: { ...rest },
+      role,
+    });
+  } catch (err) {
+    return res.status(500).json({ status: false, message: "Failed to login" });
+  }
 };
