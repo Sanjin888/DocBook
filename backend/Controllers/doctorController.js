@@ -53,7 +53,7 @@ export const getSingleDoctor = async (req, res) => {
       data: doctor,
     });
   } catch (err) {
-    res.status(500).json({
+    res.status(404).json({
       success: false,
       message: "Doctor not found",
     });
@@ -85,7 +85,7 @@ export const getAllDoctor = async (req, res) => {
       data: doctors,
     });
   } catch (err) {
-    res.status(500).json({
+    res.status(404).json({
       success: false,
       message: "Not found",
     });

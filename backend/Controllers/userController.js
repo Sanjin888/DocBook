@@ -53,7 +53,7 @@ export const getSingleUser = async (req, res) => {
       data: user,
     });
   } catch (err) {
-    res.status(500).json({
+    res.status(404).json({
       success: false,
       message: "User not found",
     });
@@ -70,7 +70,7 @@ export const getAllUser = async (req, res) => {
       data: users,
     });
   } catch (err) {
-    res.status(500).json({
+    res.status(404).json({
       success: false,
       message: "Not found",
     });
